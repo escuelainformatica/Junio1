@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Junio1", "Junio1\Junio1.csproj", "{905E649D-AAB4-48D7-BD09-ECEF27310797}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "documentos", "documentos", "{0D27B6B6-2AA1-45D3-8AE1-0D0CB3508552}"
+	ProjectSection(SolutionItems) = preProject
+		mapamental.xmind = mapamental.xmind
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
