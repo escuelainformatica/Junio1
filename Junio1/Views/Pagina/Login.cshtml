@@ -1,0 +1,27 @@
+﻿@model LibreriaBaseDeDatos.Usuario
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <h1>login</h1>
+    <form method="post">
+        usuario: <input type="text" name="NombreUsuario" value="@Model.NombreUsuario" /><br />
+        clave: <input type="password" name="Clave" value="@Model.Clave" /><br />
+        <input type="submit" name="boton" value="Inicio sesión"/><br />
+        @if(ViewBag.error!="")
+            {
+                <h2>Usuario o clave incorrecto</h2>
+            }
+
+    </form>
+</body>
+</html>

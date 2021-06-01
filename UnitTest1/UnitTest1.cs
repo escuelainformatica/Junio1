@@ -25,7 +25,7 @@ namespace UnitTest1
 
             var usuarioAComparar = new Usuario {
                 NombreUsuario = "john"
-                , Clave = "john"
+                , Clave = "b7111564537b1adbf5406a1fd902e75c2ca0ad87c2f637f68b7de7952e57459a"
                 , Correo = "john@john.com"
                 , NombreCompleto = "john doe" };
             var usuarioLeido=repo2.ObtenerUsuario("john");
@@ -37,6 +37,26 @@ namespace UnitTest1
 
             var txt=Encriptacion.ComputeSha256Hash("john");
             Assert.AreEqual("b7111564537b1adbf5406a1fd902e75c2ca0ad87c2f637f68b7de7952e57459a",txt);
+        }
+        [TestMethod]
+        public void TestMethodProbarUsuarioValidacion()
+        {
+            BaseEjemplo contextoReal = new BaseEjemplo();
+            var repo2 = new UsuarioRepo(contextoReal);
+
+            var usuarioLeido=repo2.ObtenerUsuario("john");
+
+            Assert.AreEqual(
+                usuarioLeido
+                ,repo2.ValidarUsuario(new Usuario {NombreUsuario="john",Clave="john" }));
+
+            Assert.AreEqual(
+                null
+                ,repo2.ValidarUsuario(new Usuario {NombreUsuario="john",Clave="john2" }));
+
+            Assert.AreEqual(
+                null
+                ,repo2.ValidarUsuario(new Usuario {NombreUsuario="john2",Clave="john2" }));
         }
 
 

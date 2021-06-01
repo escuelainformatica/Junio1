@@ -68,9 +68,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LibreriaBaseDeDatos\LibreriaBaseDeDatos.csproj">
-      <Project>{D606350D-75FD-42EB-9CF2-55B4AACA7FAC}</Project>
-      <Name>LibreriaBaseDeDatos</Name>
+    <ProjectReference Include="..\LibreriaBaseDeDatos2\LibreriaBaseDeDatos2.csproj">
+      <Project>{FC7F6A1E-602C-477A-BAC8-D9C4E78F95B2}</Project>
+      <Name>LibreriaBaseDeDatos2</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
